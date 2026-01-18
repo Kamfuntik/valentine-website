@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="preload">
+
+<!-- LOCK -->
+<section class="section active" id="lock">
+  <div class="hero">
+    <h1>For My Love</h1>
+    <p class="hero-sub">Enter our anniversary date</p>
+
+    <div class="date-wrap">
+      <input type="date" id="dateInput">
+      <button type="button" onclick="unlock()">Continue</button>
+    </div>
+
+    <small id="lockError"></small>
+  </div>
+</section>
+
+<!-- MONTH 1 -->
+<section class="section" id="month1">
+  <div class="content">
+    <h2>Our First Month Together</h2>
+    <p class="subtitle">Where my heart started choosing you</p>
+
+    <div class="gallery">
+      <img src="assets/month1/1.jpg">
+      <img src="assets/month1/2.jpg">
+    </div>
+
+    <button class="next" onclick="goTo('reasons')">Next</button>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section class="section" id="reasons">
+  <div class="content">
+    <h2>Why You Should Be My Valentine ❤️</h2>
+
+    <div class="reason">
+      <img src="assets/reasons/1.jpg">
+      <p>I love the way we make each other laugh and smile every time we are together, I’m always happy with you.</p>
+    </div>
+
+    <div class="reason">
+      <img src="assets/reasons/2.jpg">
+      <p>I love how you’re my best friend.</p>
+    </div>
+
+    <div class="reason">
+      <img src="assets/reasons/3.jpg">
+      <p>My favourite memory of us.</p>
+    </div>
+
+    <div class="reason">
+      <img src="assets/reasons/4.jpg">
+      <p>I love your beautiful smile.</p>
+    </div>
+
+    <div class="reason">
+      <img src="assets/reasons/5.jpg">
+      <p>
+        The perks you will get 😋<br><br>
+        ❤️ Unlimited kisses & hugs<br>
+        ❤️ Personal chauffeur<br>
+        ❤️ I’ll be your wallet<br>
+        ❤️ Access to some special things<br>
+        ❤️ Unlimited dates
+      </p>
+    </div>
+
+    <div class="reason">
+      <img src="assets/reasons/6.jpg">
+      <p>Because I’ll always love you no matter what happens.</p>
+    </div>
+
+    <button class="next" onclick="goTo('final')">Next</button>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="section" id="final">
+  <div class="hero glow">
+    <h2 class="reveal reveal-1">I Love You ❤️</h2>
+
+    <p class="final-text reveal reveal-2">
+      You mean more to me than words can explain.<br><br>
+      Will you be my Valentine?
+    </p>
+
+    <div class="choices reveal reveal-3">
+      <button onclick="sayYes()">Yes ❤️</button>
+      <button id="noBtn" onclick="runAway()">No 😢</button>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h2>Thank You ❤️</h2>
+    <p>You just made me very happy.</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
